@@ -1,116 +1,124 @@
-🚢 Full-Stack Maritime Vessel Tracking Application
+# 🚢 Full-Stack Maritime Vessel Tracking Application
+
 A full-featured vessel tracking system providing real-time ship monitoring, filtering, historical data, and interactive mapping.
 
-📌 Project Specifications
-🖥️ Frontend (React + TypeScript)
+---
+
+## 📌 Project Specifications
+
+### 🖥️ Frontend (React + TypeScript)
+
 An interactive, real-time map-based interface with advanced vessel search and filtering capabilities.
 
-Map Interface (Leaflet or Mapbox):
+- **Map Interface** (Leaflet or Mapbox):
+  - Real-time vessel positions with custom markers
+  - Zoom/pan support with marker clustering
+  - Vessel movement trails
+  - Auto-updating every 30 seconds
 
-Real-time vessel positions with custom markers
+- **Search & Filters**:
+  - Instant search (by vessel name, IMO number, MMSI)
+  - Filters by vessel type, status, and geographic region
+  - User preference save/load for search and filters
 
-Zoom/pan support with marker clustering
+- **Vessel Profile Pages**:
+  - Static vessel data (dimensions, type, etc.)
+  - Current location and status
+  - 24-hour movement history
+  - Timeline of key events
 
-Vessel movement trails
+---
 
-Auto-updating every 30 seconds
+### 🧠 Backend (PHP + Node.js with TypeScript)
 
-Search & Filters:
+#### 🐘 PHP API Core
+- CRUD operations for vessel data
+- User authentication and rate limiting
+- RESTful endpoints for static data
+- PostgreSQL + PostGIS for spatial data queries
 
-Instant search (by vessel name, IMO number, MMSI)
+#### ⚙️ Node.js Real-Time Service
+- Real-time AIS data streaming (via WebSockets)
+- Vessel state caching
+- AIS message simulation and processing
+- Optional: Kafka-based data ingestion
 
-Filters by vessel type, status, and geographic region
+#### 🧬 GraphQL API Layer
+- Efficient, customizable data queries
+- Real-time subscriptions
+- Error handling and validations
+- Full API documentation
 
-User preference save/load for search and filters
+---
 
-Vessel Profile Pages:
+### 🧱 Infrastructure
 
-Static vessel data (dimensions, type, etc.)
-
-Current location and status
-
-24-hour movement history
-
-Timeline of key events
-
-🧠 Backend (PHP + Node.js with TypeScript)
-🐘 PHP API Core
-CRUD operations for vessel data
-
-User authentication and rate limiting
-
-RESTful endpoints for static data
-
-PostgreSQL + PostGIS for spatial data queries
-
-⚙️ Node.js Real-Time Service
-Real-time AIS data streaming (via WebSockets)
-
-Vessel state caching
-
-AIS message simulation and processing
-
-Optional: Kafka-based data ingestion
-
-🧬 GraphQL API Layer
-Efficient, customizable data queries
-
-Real-time subscriptions
-
-Error handling and validations
-
-Full API documentation
-
-🧱 Infrastructure
 Containerized environment using Docker.
 
-Services:
+**Services:**
+- React frontend
+- PHP backend
+- Node.js real-time processor
+- PostgreSQL + PostGIS
+- Redis cache
+- Optional Kafka broker
 
-React frontend
+---
 
-PHP backend
+### 🧪 Testing
 
-Node.js real-time processor
+- **Unit Testing**: Minimum 80% coverage
+- **Integration Testing**: API endpoints
+- **E2E Testing**: Core user flows
+- **Performance Testing**: Real-time stream handling
 
-PostgreSQL + PostGIS
+---
 
-Redis cache
+### 🚀 CI/CD Pipeline
 
-Optional Kafka broker
-
-🧪 Testing
-Unit Testing: Minimum 80% coverage
-
-Integration Testing: API endpoints
-
-E2E Testing: Core user flows
-
-Performance Testing: Real-time stream handling
-
-🚀 CI/CD Pipeline
 Automated DevOps using CI tools (GitHub Actions / GitLab CI):
 
-Build & test automation
+- Build & test automation
+- Code quality (SonarQube integration)
+- Deployment to staging and production
+- Security scanning and vulnerability checks
 
-Code quality (SonarQube integration)
+---
 
-Deployment to staging and production
+## 📦 Deliverables
 
-Security scanning and vulnerability checks
+- ✅ API Specifications (REST & GraphQL)
+- ✅ Full Source Code with Documentation
+- ✅ Test Reports & Coverage Stats
+- ✅ Performance Benchmark Results
+- ✅ Dockerized Deployment Instructions
+- ✅ Technical Architecture Diagram
 
-📦 Deliverables
-✅ API Specifications (REST & GraphQL)
+---
 
-✅ Full Source Code with Documentation
+## ⏱ Timeline
 
-✅ Test Reports & Coverage Stats
+**Duration**: 12 Weeks  
+**Milestones**: Bi-weekly progress checkpoints (6 total)
 
-✅ Performance Benchmark Results
+---
 
-✅ Dockerized Deployment Instructions
+## 📂 Repository Structure
 
-✅ Technical Architecture Diagram
+```bash
+/
+├── frontend/              # React + TypeScript app
+├── backend-php/           # PHP API core
+├── backend-node/          # Node.js real-time processor
+├── graphql-api/           # GraphQL API gateway
+├── database/              # PostgreSQL schema and seed data
+├── docker/                # Dockerfiles and compose files
+├── tests/                 # Unit, integration, and E2E tests
+└── docs/                  # Architecture diagram, API specs, etc.
+```
 
-⏱ Timeline
-Duration: 12 Weeks
-Milestones: Bi-weekly progress checkpoints (6 total)
+---
+
+## 📄 License
+
+MIT License. See [LICENSE](./LICENSE) for details.
