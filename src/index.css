@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-gray-100 text-gray-900 m-0 p-0 min-h-screen;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .vessel-marker {
+    @apply flex items-center justify-center w-6 h-6 rounded-full text-white text-xs font-bold;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .vessel-marker-cargo {
+    @apply bg-status-moving;
+  }
+  
+  .vessel-marker-tanker {
+    @apply bg-status-moored;
+  }
+  
+  .vessel-marker-passenger {
+    @apply bg-status-underway;
+  }
+  
+  .vessel-marker-fishing {
+    @apply bg-accent-500;
+  }
+  
+  .vessel-marker-unknown {
+    @apply bg-status-unknown;
+  }
+
+  .vessel-tooltip {
+    @apply bg-white shadow-lg p-2 rounded-md border border-gray-200;
+  }
+
+  .map-container {
+    @apply w-full h-[calc(100vh-4rem)];
+  }
+
+  .filter-panel {
+    @apply bg-white shadow-md rounded-md p-4 absolute top-4 left-4 z-[999] w-80 max-h-[calc(100vh-8rem)] overflow-auto;
+  }
+
+  .details-panel {
+    @apply bg-white shadow-md rounded-md p-4 absolute top-4 right-4 z-[999] w-96 max-h-[calc(100vh-8rem)] overflow-auto;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  @apply rounded-md shadow-lg border border-gray-200 p-0;
+}
+
+.leaflet-popup-content {
+  @apply m-0 p-3;
+}
+
+.leaflet-popup-tip {
+  @apply bg-white;
+}
