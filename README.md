@@ -1,4 +1,4 @@
-# 🚢 Full-Stack Maritime Vessel Tracking Application ( under built mode )
+# 🚢 Full-Stack Maritime Vessel Tracking Application ("Under build mode")
 
 A full-featured vessel tracking system providing real-time ship monitoring, filtering, historical data, and interactive mapping.
 
